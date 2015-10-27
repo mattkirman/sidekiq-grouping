@@ -6,7 +6,7 @@ module Sidekiq
 
         def run!
           info 'Sidekiq::Grouping starts supervision'
-          Sidekiq::Grouping::Actor.supervise_as(:sidekiq_grouping)
+          Sidekiq::Grouping::Actor.supervise(as: :sidekiq_grouping)
         end
       end
     end
